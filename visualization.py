@@ -19,7 +19,7 @@ DB_URL = st.secrets["DATABASE"]["DB_URL"]
 
 def connect_firebase():
     if not firebase_admin._apps:
-        firebase_cred = st.secrets["FIREBASE"]
+        firebase_cred = dict(st.secrets["FIREBASE"])
         cred = credentials.Certificate(firebase_cred)
         firebase_admin.initialize_app(
             cred,

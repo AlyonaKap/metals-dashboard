@@ -1,5 +1,3 @@
-import os
-from dotenv import load_dotenv
 import pandas as pd
 
 import streamlit as st
@@ -16,9 +14,7 @@ SOURCE_MAP = {
     "Yahoo FTSE": "yh_ftse",
 }
 
-
-load_dotenv()
-DB_URL = os.getenv("FIREBASE_URL")
+DB_URL = st.secrets["DATABASE"]["DB_URL"]
 
 
 def connect_firebase():

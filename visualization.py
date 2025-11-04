@@ -23,7 +23,8 @@ DB_URL = os.getenv("FIREBASE_URL")
 
 def connect_firebase():
     if not firebase_admin._apps:
-        cred = credentials.Certificate("credentials.json")
+        firebase_creds = st.secrets["FIREBASE"]
+        cred = credentials.Certificate(firebase_creds)
         firebase_admin.initialize_app(
             cred,
             {"databaseURL": DB_URL},

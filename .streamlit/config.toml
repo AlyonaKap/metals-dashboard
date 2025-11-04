@@ -1,0 +1,16 @@
+[theme]
+
+base = "dark"
+
+backgroundColor = "#0f0e0eff"
+primaryColor = "#9d88edff"
+
+
+font = "'Montserrat':https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+baseFontWeight = 300
+baseFontSize = 15
+
+headingFont = "Montserrat"
+
+
+
